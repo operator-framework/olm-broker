@@ -55,9 +55,8 @@ vendor: $(DEP)
 vendor-update: $(DEP)
 	$(DEP) ensure -v
 
-# TODO: add Dockerfile
-#container: build
-#	docker build -t $(IMAGE_REPO):$(IMAGE_TAG) .
+container: build
+	docker build -t $(IMAGE_REPO):$(IMAGE_TAG) .
 
 clean:
 	rm -rf bin
